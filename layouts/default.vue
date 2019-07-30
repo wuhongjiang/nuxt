@@ -1,8 +1,16 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+<div>
+  <header />
+  <nuxt />
+  <footer />
+</div>
 </template>
+<script>
+import Header from '@/components/header'
+export default {
+    co
+}
+</script>
 
 <style>
 html {
