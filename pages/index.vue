@@ -11,7 +11,7 @@
   </el-carousel>
   <!-- 搜索框 -->
   <div class="banner-content">
-    <div class="search-bar">
+    <div class="search-tar">
       <!-- teb栏 -->
       <el-row type="flex" class="search-tab">
         <span v-for="(item, index) in options" :key="index" :class="{ active: current == index }" @click="handleClick(index)">
@@ -33,24 +33,25 @@
 export default {
   data() {
     return {
-      banners: []
+      banners: [],
+      // 这个数据声明并不是唯一的，也可以使用对象的方式
+      options: [{
+          title: "攻略",
+          placeholder: "请输入城市"
+        },
+        {
+          title: "酒店",
+          placeholder: "请输入城市搜索酒店"
+        },
+        {
+          title: "机票",
+          placeholder: ""
+        }
+
+      ],
+      // 记录当前的状态下标
+      current: 0
     }
-    // 这个数据声明并不是唯一的，也可以使用对象的方式
-    options: [{
-        title: "攻略",
-        placeholder: "请输入城市"
-      },
-      {
-        title: "酒店",
-        placeholder: "请输入城市搜索酒店"
-      },
-      {
-        title: "机票",
-        placeholder: ""
-      }
-    ]
-    // 记录当前的状态下标
-    current: 0
   },
   methods: {
     // 把index的值赋给current

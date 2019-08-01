@@ -14,7 +14,7 @@
         <nuxt-link to="/air">国内机票</nuxt-link>
       </el-row>
       <!-- 登陆注册 -->
-      <div v-if="false">
+      <div v-if="!$store.state.user.userInfo.token">
         <nuxt-link to="/">
           <el-dropdown>
             <span class="el-dropdown-link">
@@ -48,7 +48,15 @@
 
 <script>
 export default {
+  mounted(){
 
+  },
+  methods:{
+    handleLogut(){
+      // 清除userinfo的数据、
+      this.$store.commit("user/clearUserInfo");
+    }
+  }
 }
 </script>
 
