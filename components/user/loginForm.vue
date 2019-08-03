@@ -4,7 +4,7 @@
     <el-input v-model="form.username" placeholder="用户名/手机号码"></el-input>
   </el-form-item>
   <el-form-item class="form-item" prop="password">
-    <el-input v-modle="form.password" placeholder="密码" type="password"></el-input>
+    <el-input v-model="form.password" placeholder="密码" type="password"></el-input>
   </el-form-item>
   <p class="form-text">
     <nuxt-link to="#">忘记密码</nuxt-link>

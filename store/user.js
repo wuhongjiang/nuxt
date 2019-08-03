@@ -12,7 +12,7 @@ export const state = ()=>{
 export const mutations = {
   // state就是上面的state，这个参数是固定默认的
   // data 使用调用该方法的时候传人的数据
-  setUseerInfo(state,data){
+  setUserInfo(state,data){
     state.userInfo = data;
   },
   // 清除用户数据
